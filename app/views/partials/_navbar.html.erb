@@ -1,15 +1,15 @@
 <nav class="navbar">
   <ul class="navlinks">
     <li class="navlink">
-      <%= link_to "Home", root_path %>
+      <%= link_to "Home", root_url %>
     </li>
 
     <%# Removes the Login link if a user is not signed in %>
     <% unless current_user%>
       <li class="navlink">
-      <%= link_to "Login", user_session_path %>
-      <%end%>
+      <%= link_to "Login", user_session_url %>
       </li>
+      <%end%>
 
     <%# Creates a signout link if a user is not signed in %>
     <% if current_user%>

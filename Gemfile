@@ -74,6 +74,8 @@ end
 # Linters
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'cancancan'
+
 # devise
 gem 'devise'
 
