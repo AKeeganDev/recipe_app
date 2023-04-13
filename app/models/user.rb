@@ -8,7 +8,11 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   validates :code, acceptance: { accept: [ENV['SECRET_CODE']], message: 'Invalid code' }
 
+  def is?(requested_role)
+    role == requested_role.to_s
+  end
+  
   def admin?
-    role == 'admin'
+    return self.role == 'admin'
   end
 end
