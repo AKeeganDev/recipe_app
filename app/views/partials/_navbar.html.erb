@@ -16,6 +16,9 @@
       <li class="navlink">
         <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }%>
       </li>
+      <li class="navlink">
+        <%= link_to "Profile", user_path(current_user.id) %>
+      </li>
     <%end%>
   </ul>
 </nav>
