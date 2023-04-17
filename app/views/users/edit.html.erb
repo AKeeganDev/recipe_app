@@ -1,0 +1,5 @@
+<%= form_with model: @user, local: true, method: :patch, scope: :user do |f| %>
+    <%= f.label "Enter Admin Code" %>
+    <%= f.text_field :role %>
+    <%= f.submit "Submit" %>
+<%end%>
