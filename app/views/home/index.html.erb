@@ -1,4 +1,4 @@
-<%= render partial: 'partials/navbar'%>
+<%= render partial: 'partials/navbar', locals: { current_user: current_user }%>
 
 <%= form_with url: root_path, class: "search-form", method: :get do %>
   <input class="search-bar" onkeydown="if(this.value == '') {this.name = 'query'} else {this.name = 'query'}" value=<%="#{@params[:query]}"%>>
@@ -13,6 +13,6 @@
 
 <%= render partial: 'partials/pagination_bar', locals: { current_page: @current_page, total_pages: @total_pages, params: @params } %>
 
-<% if current_user%>
+<% if can? :manage, Recipe%>
 <%= link_to "Create new recipe", new_recipe_path %>
 <% end %>

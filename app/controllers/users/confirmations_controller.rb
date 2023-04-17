@@ -1,4 +1,5 @@
 class Users::ConfirmationsController < Devise::ConfirmationsController
+  # helper_method :current_user
   GET /resource/confirmation/new
   def new
     super

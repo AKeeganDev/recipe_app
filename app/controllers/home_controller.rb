@@ -2,6 +2,8 @@ class HomeController < ApplicationController
   # placeholder logic to prevent an endless user session.
   # Comment out before_action :signout if you want to stay logged in
 
+  # @current_user = current_user || nil
+
   RECIPES_PER_PAGE = 4
 
   def index

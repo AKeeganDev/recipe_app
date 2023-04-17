@@ -15,11 +15,15 @@
     </div>
   </article class="recipe">
 
+  <%p current_user.role%>
+
   <%# renders buttons only if a user is logged in %>
-  <%if current_user%>
+
+  <% if can? :manage, recipe %>
   <div class="admin-buttons">
     <%=button_to 'Delete', recipe_path(recipe.id), method: :delete%>
     <%=button_to 'Edit', edit_recipe_path(recipe.id), method: :get%>
   </div>
-  <%end%>
+<% end %>
+
 </section>
