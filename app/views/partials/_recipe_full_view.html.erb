@@ -15,6 +15,8 @@
     </div>
   </article class="recipe">
 
+  <%p current_user.role%>
+
   <%# renders buttons only if a user is logged in %>
 
   <% if can? :manage, recipe %>
