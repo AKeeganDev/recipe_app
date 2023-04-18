@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if user_params[:role] == ENV['SECRET_CODE']
-      @user.update(role: "admin")
+      @user.update(role: 'admin')
       @user.save
       redirect_to '/'
     else
