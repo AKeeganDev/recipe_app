@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :confirmable
   has_many :recipes, dependent: :delete_all
   validates :username, presence: true, uniqueness: true
-  validates :code, acceptance: { accept: [ENV['SECRET_CODE']], message: 'Invalid code' }
+  # validates :code, acceptance: { accept: [ENV['SECRET_CODE']], message: 'Invalid code' }
 
   def is?(requested_role)
     role == requested_role.to_s

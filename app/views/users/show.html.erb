@@ -1,0 +1,20 @@
+<%= render partial: 'partials/navbar', locals: { current_user: current_user }%>
+
+<section class="profile-section">
+  <h1><%=@user.username%>'s Profile</h1>
+  <ul>
+    <% @recipes.each do |recipe| %>
+      <li>
+        <%= render partial: 'partials/recipe_preview', locals: { recipe: recipe } %>
+      </li>
+    <% end %>
+  <ul>
+
+  <%= render partial: 'partials/pagination_bar_profile', locals: { current_page: @current_page, total_pages: @total_pages, params: @params } %>
+  
+  <% unless current_user.admin? %>
+    <div>
+      <%= button_to "Enter Admin Code", edit_user_path(@user), method: :get %>
+    </div>
+  <% end %>
+</section>

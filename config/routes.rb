@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   root "home#index"
 
   resources :recipes, only: [:new, :create, :show, :update, :destroy, :edit]
+  resources :users, only: [:show, :edit, :update]
 
 end

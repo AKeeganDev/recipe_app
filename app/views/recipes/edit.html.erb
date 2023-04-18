@@ -24,7 +24,7 @@
   <%= form.label :image%>
   <%= form.file_field :image, class: 'form-control', direct_upload: true %>
   </div>
-  <%= form.submit %>
+  <%= form.submit "Save Changes", class: "submit-button" %>
 <%end%>
 <%else%>
 <h1>You must be signed in to create, edit, or delete recipes</h1>
