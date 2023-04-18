@@ -1,5 +1,7 @@
+<%= render partial: 'partials/navbar', locals: { current_user: current_user }%>
+
 <%= form_with model: @user, local: true, method: :patch, scope: :user do |f| %>
     <%= f.label "Enter Admin Code" %>
-    <%= f.text_field :role %>
+    <%= f.text_field :role, value: ''%>
     <%= f.submit "Submit" %>
 <%end%>

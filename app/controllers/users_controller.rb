@@ -23,8 +23,8 @@ class UsersController < ApplicationController
       @user.save
       redirect_to '/'
     else
-      flash[:error] = 'Incorrect code'
-      redirect_to edit_user_path(@user.id)
+      # flash[:error] = 'Incorrect code'
+      redirect_to edit_user_path(@user.id), notice: 'Incorrect code'
     end
   end
 
