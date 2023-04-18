@@ -9,4 +9,24 @@
     margin: 0;
     padding: 0;
   }
+
+  div {
+    display: flex;
+    justify-content: center;
+
+    button {
+      padding: 10px;
+      font-size: 15px;
+      border: none;
+      background-color: #71d6ca;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .profile-section {
+    h1 {
+      font-size: 40px;
+    }
+  }
 }

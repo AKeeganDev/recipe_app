@@ -13,6 +13,8 @@
   <%= render partial: 'partials/pagination_bar_profile', locals: { current_page: @current_page, total_pages: @total_pages, params: @params } %>
   
   <% unless current_user.admin? %>
-    <%= button_to "Enter Admin Code", edit_user_path(@user), method: :get %>
+    <div>
+      <%= button_to "Enter Admin Code", edit_user_path(@user), method: :get %>
+    </div>
   <% end %>
 </section>
