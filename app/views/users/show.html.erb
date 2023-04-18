@@ -1,8 +1,8 @@
 <%= render partial: 'partials/navbar', locals: { current_user: current_user }%>
 
-<section>
+<section class="profile-section">
   <h1><%=@user.username%>'s Profile</h1>
-  <ul class="profile-recipes">
+  <ul>
     <% @recipes.each do |recipe| %>
       <li>
         <%= render partial: 'partials/recipe_preview', locals: { recipe: recipe } %>
@@ -10,7 +10,7 @@
     <% end %>
   <ul>
 
-  <%= render partial: 'partials/pagination_bar', locals: { current_page: @current_page, total_pages: @total_pages, params: @params } %>
+  <%= render partial: 'partials/pagination_bar_profile', locals: { current_page: @current_page, total_pages: @total_pages, params: @params } %>
   
   <% unless current_user.admin? %>
     <%= button_to "Enter Admin Code", edit_user_path(@user), method: :get %>
