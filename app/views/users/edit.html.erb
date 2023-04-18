@@ -1,7 +1,12 @@
 <%= render partial: 'partials/navbar', locals: { current_user: current_user }%>
 
-<%= form_with model: @user, local: true, method: :patch, scope: :user do |f| %>
+<section class="admin-form">
+  <h1>Enter Code to Become Admin</h1>
+  <%= form_with model: @user, local: true, method: :patch, scope: :user do |f| %>
+    <div>
     <%= f.label "Enter Admin Code" %>
     <%= f.text_field :role, value: ''%>
-    <%= f.submit "Submit" %>
-<%end%>
+    </div>
+    <%= f.submit "Submit", class: "submit-button" %>
+  <%end%>
+</section>

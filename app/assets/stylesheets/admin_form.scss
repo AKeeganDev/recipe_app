@@ -1,4 +1,4 @@
-.recipe-form {
+.admin-form {
   h1 {
     text-align: center;
   }
@@ -21,23 +21,7 @@
       padding: 5px;
     }
 
-    .form-control {
-      border: none;
-      background-color: #f5f5f5;
-      padding: 20px;
-      margin: 5px 0 10px;
-    }
-
-    textarea {
-      border: 1px solid lightgray;
-      resize: vertical;
-      margin: 5px 0 10px;
-      padding: 5px;
-      min-height: 50px;
-      box-sizing: border-box;
-    }
-
-    .submit-button {
+   .submit-button {
       padding: 10px;
       font-size: 15px;
       border: none;
