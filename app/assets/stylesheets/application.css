@@ -18,3 +18,9 @@ html {
   background-color: #ffea5c;
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
+
+.alerts {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
