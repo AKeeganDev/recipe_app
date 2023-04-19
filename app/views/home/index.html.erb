@@ -13,6 +13,8 @@
 
 <%= render partial: 'partials/pagination_bar', locals: { current_page: @current_page, total_pages: @total_pages, params: @params } %>
 
+<div class="create-recipe-container">
 <% if can? :manage, Recipe%>
-<%= link_to "Create new recipe", new_recipe_path %>
+<%= link_to "Create new recipe", new_recipe_path, class: "create-recipe-button" %>
 <% end %>
+</div>
