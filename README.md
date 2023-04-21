@@ -5,9 +5,10 @@
 
 # 🛠 Built With
 - Ruby on Rails
+- Postgresql
 - Devise
 - Shrine
-- Minimagik
+- Minimagick
 - Cloudinary (in place of AWS)
 - Render
 - Actionmailer (synced to GMAIL)
