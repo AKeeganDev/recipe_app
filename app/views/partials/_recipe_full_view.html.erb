@@ -2,8 +2,8 @@
 <section class="full-recipe-view">
   <article class="recipe">
     <% if recipe.image_data %>
-    <%recipe.image_derivatives!%>
-    <%= image_tag recipe.image_url(:large),:class => "recipe-image" %>
+    <%p ENV['CLOUD_URL']%>
+    <%= image_tag ENV['CLOUD_URL'] + JSON.parse(@recipe.image_data)["id"],:class => "recipe-image" %>
     <% end %>
     <div class="recipe-details">
       <h1 class="recipe-title"><%= recipe.name %></h1>
