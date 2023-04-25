@@ -3,7 +3,7 @@
   <article class="recipe">
     <% if recipe.image_data %>
     <%p ENV['CLOUD_URL']%>
-    <%= image_tag ENV['CLOUD_URL'] + JSON.parse(@recipe.image_data)["id"],:class => "recipe-image" %>
+    <%= image_tag recipe.image_url,:class => "recipe-image" %>
     <% end %>
     <div class="recipe-details">
       <h1 class="recipe-title"><%= recipe.name %></h1>
